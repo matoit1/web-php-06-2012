@@ -10,6 +10,7 @@ abc
 .mine
 123
 def
+thanh
 
 
 
