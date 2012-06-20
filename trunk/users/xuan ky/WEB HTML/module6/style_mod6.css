@@ -1,0 +1,281 @@
+@charset "utf-8";
+#wrap {
+	height: 665px;
+	width: 395px;
+	margin:auto;
+	
+}
+
+#head{
+
+	background-image:url(image/HEAD.png);
+	height:70px;
+	
+}
+
+#body{
+	padding:0px;
+	background-color:#000000;
+}
+
+#screen{
+	background-color:#FFF;
+	background-image:url(image/screen_bg.jpg);
+	height:520px;
+	width:335px;
+	margin:auto;
+	position:relative;
+}
+
+#footer {
+	background-image:url(image/FOOTER.png);
+	height:60px;
+	padding-top:15px;
+	
+}
+
+#status {
+	background-image: url(image/status_bg.jpg);
+	background-repeat:repeat-x;
+	height:24px;
+	margin-bottom:10px;
+	padding:5px;
+}
+#song{float:left;}
+#pin{float:right;}
+
+.row{
+	padding:0px;
+	display:inline-table;
+	width:95px;	
+}
+
+/*--style cho icon--*/
+
+#icon1 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 7px 10px 10px;
+}
+
+#icon1 a{
+	display:block;
+	background-image:url(image/trangchu.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon2 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 7px 10px 10px;
+}
+
+#icon2 a{
+	display:block;
+	background-image: url(image/download2.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon3 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 7px 10px 10px;
+}
+
+#icon3 a{
+	display:block;
+	background-image: url(image/photo.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon4 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 0px 10px 3px;
+}
+
+#icon4 a{
+	display:block;
+	background-image: url(image/baiviet.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon5 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 0px 10px 3px;
+}
+
+#icon5 a{
+	display:block;
+	background-image: url(image/Data.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+
+#icon6 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 0px 10px 3px;
+}
+#icon6 a{
+	display:block;
+	background-image: url(image/email.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon7 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin: 7px 10px 10px 10px;
+}
+
+#icon7 a{
+	display:block;
+	background-image: url(image/Favourites.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon8 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin:7px 10px 10px 10px;
+}
+
+#icon8 a{
+	display:block;
+	background-image: url(image/music-green.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+#icon9 {
+	height:95px;
+	width:95px;
+	padding:8px 0px 8px 0px;
+	margin:7px 10px 10px 10px;
+}
+
+#icon9 a{
+	display:block;
+	background-image: url(image/thungrac.png);
+	background-repeat:no-repeat; 
+	height: 95px;
+	width: 95px;
+}
+
+/* style dock*/
+
+#dock {
+	position:absolute;
+	padding:0px;
+	margin:0px;
+	width:337px;
+	height:84px;
+	background-image:url(image/dock_bg.png);
+	background-position:bottom; //canh chinh hinh bang bottom cho dock_bg
+	//background-color:#3F0;
+	background-repeat: no-repeat;
+	bottom: 0px;
+	
+}
+#dicon1 {
+	height:60px;
+	width:60px;
+	display:inline-table;
+	margin:15px 0px 5px 13px;
+	padding: 0px 2px 0px 2px;
+}
+
+#dicon1 a{
+	display:block;
+	height:60px;
+	width:60px;
+	background-image:url(image/dock1.png);
+}
+#dicon2 {
+	height:60px;
+	width:60px;
+	display:inline-table;
+	margin:15px 0px 5px 13px;
+	padding: 0px 2px 0px 2px;
+}
+
+#dicon2 a{
+	display:block;
+	height:60px;
+	width:60px;
+	background-image: url(image/dock2.png);
+}
+
+
+#dicon3 {
+	height:60px;
+	width:60px;
+	display:inline-table;
+	margin:15px 0px 5px 13px;
+	padding: 0px 1px 0px 1px;
+}
+
+#dicon3 a{
+	display:block;
+	height:60px;
+	width:60px;
+	background-image: url(image/dock3.png);
+}
+
+#dicon4 {
+	height:60px;
+	width:60px;
+	display:inline-table;
+	margin:15px 0px 5px 13px;
+	padding: 0px 1px 0px 1px;
+}
+
+#dicon4 a{
+	display:block;
+	height:60px;
+	width:60px;
+	background-image: url(image/dock4.png);
+}
+
+/*home button style*/
+#home {
+	margin:auto;
+	width:91px;
+	height:44px;
+}
+
+#home a{
+	display:block;
+	background-image:url(image/homebut.png);
+	width:91px;
+	height:44px;
+}
+
+#home a:hover{
+	background-image:url(image/homebut2.png);
+}
