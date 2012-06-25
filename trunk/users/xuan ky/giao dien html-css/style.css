@@ -1,0 +1,72 @@
+@charset "utf-8";
+#wrap {
+	margin: auto;
+	width: 900px;
+}
+//------------------------------
+#head{
+	margin:0px;
+	padding:0px;
+	}
+
+#head #logo{
+	height: 200px;
+	width: 250px;
+	float:left;
+	background-color: #666;
+	}
+	
+#head #banner{
+	height: 200px;
+	width: 650px;
+	float: right;
+	background-color: #006;
+	}
+
+//------------------------------
+#nav{
+	float:left;
+	height:33px;
+	width:900px;
+	background-image:url(image/nav_bg.jpg);
+	background-repeat:repeat-x;
+	}
+
+#nav ul{
+	float:left;
+	list-style:none;
+	}
+
+#nav ul li{
+	float:left;
+	display:inline-table;
+	}
+
+#nav ul li a{
+	display:block;
+	font-weight:bold;
+	text-decoration: none;
+	color:#00F;
+	padding:3px 5px;}
+//------------------------------
+#content{
+	width:900px;
+	margin:0px;
+	padding:0px;
+	}
+#sidebar{
+	width:250px;
+	float:left;
+	height:500px;
+	}
+#primary{
+	float:right;
+	width:650px;
+	height:500px;
+	}
+//----------------------------------
+#footer{
+	background-color:#06F;
+	height:60px;
+	
+	}
