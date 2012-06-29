@@ -1,12 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+    <style>
+    	table{
+			margin:auto;
+			background-color:#03F;
+			}
+		td{
+			border:solid 1px #000000;
+			}			
+				
+    </style>
+
 </head>
 
 <body>
-	<table>
+	<form action="#" method="post">
+	<table cellpadding="1" cellspacing="0">
     	<tr>
         	<td align="center" width="100px">Họ Tên</td>
             <td align="center" width="400px">
@@ -66,9 +78,37 @@
         <tr>
         	<td align="center" width="100px">Quê quán</td>
             <td align="center" width="400px">
-            	<input type="text" size="25" name="quequan" value=""
+            	<input type="text" size="25" name="quequan" value="" />
+            </td>
+        </tr>     
+
+        <tr>
+        	<td align="center" width="100px">Số ĐT</td>
+            <td align="center" width="400px">
+            	<input type="text" size="25" name="dienthoai" value="" />
+            </td>
+        </tr>    
+
+        <tr>
+        	<td align="center" width="100px">Học vấn</td>
+            <td align="center" width="400px">
+            	<select>
+                	<option value="daihoc">Đại học</option>
+                    <option value="caodang">Cao đẳng</option>
+                    <option value="trunghoc">Trung học</option>
+                    <option value="khac">Khác...</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+        	<td colspan="2" align="center" >
+            	<input type="submit" name="xacnhan" value="Xác nhận"/>&nbsp;
+                <input type="reset" name="lamlai" value="Làm lại" />
             </td>
         </tr>        
+                       
     </table>
+    </form>
 </body>
 </html>
