@@ -5,14 +5,37 @@ body {
 	font-family:Arial, Helvetica, sans-serif;
 }
 
+table{
+	margin:auto;
+}
+	
 
-.tieude{
-	background-color:#c5d9f1;
-	height: 20px;
+td {
 	text-align:center;
 }
 
-#bang{
+.tieude{
+	background-color:#c5d9f1;
+	height: 50px;
+	text-align:center;
+}
+
+.bang{
 	border:thin;
 	border-color:#8ab2e3;
+}
+
+.canhphai {
+	text-align:right;
+	padding-right:10px;
+}
+
+.canhtrai {
+	text-align:left;
+	padding-left:10px;
+}
+
+.tiso{
+	background-color:#ffffcc;
+	width:50px;
 }
