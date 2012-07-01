@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.tieude{
+	background-color:#c5d9f1;
+	height: 20px;
+	text-align:center;
+}
+
+#bang{
+	border:thin;
+	border-color:#8ab2e3;
+}
