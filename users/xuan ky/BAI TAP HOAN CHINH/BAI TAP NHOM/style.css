@@ -7,13 +7,17 @@ body {
 
 table{
 	margin:auto;
+	margin-bottom:10px;
+	border:thin;
 }
-	
+
 
 td {
+	//border: thin;
+	border-top-width: thin;
+	border-bottom-width:thin;
 	text-align:center;
 	border-color:#8ab2e3;
-	border:thin;
 }
 
 .tieude{
@@ -21,6 +25,8 @@ td {
 	background-color:#c5d9f1;
 	height: 50px;
 	text-align:center;
+	font-weight:bold;
+	font-size:18px;
 }
 
 .bang{
@@ -41,4 +47,157 @@ td {
 .tiso{
 	background-color:#ffffcc;
 	width:50px;
+}
+.maucam{
+	height:35px;
+	background-color:#febf00;
+	padding-top:15px;
+	padding-bottom:10px;
+	width:515px;
+}
+.version{
+	text-align:left;}
+
+/*co cac nuoc*/
+.balan{
+	border:thin;
+	background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;	
+}
+
+.chsec {
+	border:thin;
+	background-image: url(image/CH%20SEC.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.hylap{
+	border:thin;
+	background-image: url(image/HY%20LAP.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.nga{
+	border:thin;
+	background-image: url(image/NGA.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.Halan {
+	border:thin;
+	background-image: url(image/HA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.duc {
+	border:thin;
+	background-image:url(image/DUC.JPG);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+.taybannha{
+	border:thin;
+	background-image:url(image/TAY%20BAN%20NHA.JPG);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.chireland{
+	border:thin;
+	background-image: url(image/CH%20IRELEND.JPG);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.phap{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.ucrina{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.danmach{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.y{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.thuydien{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.anh{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.bodaonha{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
+}
+
+.croatia{
+	border:thin;
+	//background-image:url(image/BA%20LAN.png);
+	background-position:center;
+	background-repeat:none;
+	width:20px;
+	height:18px;
 }
