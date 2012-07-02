@@ -46,14 +46,14 @@ td {
 
 .tiso{
 	background-color:#ffffcc;
-	width:50px;
+	width:35px;
 }
 .maucam{
 	height:35px;
 	background-color:#febf00;
 	padding-top:15px;
 	padding-bottom:10px;
-	width:515px;
+	width:528px;
 }
 .version{
 	text-align:left;}
@@ -106,7 +106,7 @@ td {
 
 .duc {
 	border:thin;
-	background-image:url(image/DUC.JPG);
+	background-image: url(image/DUC.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -114,7 +114,7 @@ td {
 }
 .taybannha{
 	border:thin;
-	background-image:url(image/TAY%20BAN%20NHA.JPG);
+	background-image:url(image/TAYBANNHA.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -123,7 +123,7 @@ td {
 
 .chireland{
 	border:thin;
-	background-image: url(image/CH%20IRELEND.JPG);
+	background-image:url(image/CHIRELEND.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -132,7 +132,7 @@ td {
 
 .phap{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/PHAP.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -141,7 +141,7 @@ td {
 
 .ucrina{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/UKRAINA.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -150,7 +150,7 @@ td {
 
 .danmach{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/DANMACH.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -159,7 +159,7 @@ td {
 
 .y{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/ITALYA.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -168,7 +168,7 @@ td {
 
 .thuydien{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/THUYDIEN.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -177,7 +177,7 @@ td {
 
 .anh{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/ANH.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -186,7 +186,7 @@ td {
 
 .bodaonha{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/BODAONHA.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
@@ -195,7 +195,7 @@ td {
 
 .croatia{
 	border:thin;
-	//background-image:url(image/BA%20LAN.png);
+	background-image:url(image/CROATIA.png);
 	background-position:center;
 	background-repeat:none;
 	width:20px;
