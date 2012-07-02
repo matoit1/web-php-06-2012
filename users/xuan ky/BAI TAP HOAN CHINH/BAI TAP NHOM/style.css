@@ -12,9 +12,12 @@ table{
 
 td {
 	text-align:center;
+	border-color:#8ab2e3;
+	border:thin;
 }
 
 .tieude{
+	border:hidden;
 	background-color:#c5d9f1;
 	height: 50px;
 	text-align:center;
