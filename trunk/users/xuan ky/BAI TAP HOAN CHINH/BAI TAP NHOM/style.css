@@ -9,13 +9,12 @@ table{
 	margin:auto;
 	margin-bottom:10px;
 	border:thin;
+	border:thin;
+	border-color:#8ab2e3;
 }
 
 
 td {
-	//border: thin;
-	border-top-width: thin;
-	border-bottom-width:thin;
 	text-align:center;
 	border-color:#8ab2e3;
 }
@@ -29,10 +28,10 @@ td {
 	font-size:18px;
 }
 
-.bang{
+/*.bang{
 	border:thin;
 	border-color:#8ab2e3;
-}
+}*/
 
 .canhphai {
 	text-align:right;
