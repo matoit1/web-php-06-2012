@@ -11,25 +11,25 @@
     #wrap ul li{
                     float: left;
                     list-style: none;
-                    margin: 0px;                    
-                    position: relative;
+                    
+	                  position: relative;
             }
     #wrap ul li a{
-                    float: left;
+                    /*float: left;*/
                     text-decoration: none;
                     font-size: 20px;
                     
             }
     #wrap ul{
-                
-                    float: left;
+                position:relative;
+
             }
     #wrap li ul{
                     position: absolute;
                     display: none;
                     width: 15em;
                     top: 36px;
-                    left: -11px;    
+
             
             }
 
@@ -61,6 +61,20 @@
 #wrap ul li ul li {
 	border: 1px solid #686;
 width: 100%;
+position:relative;
+}
+#wrap ul:hover li ul li ul {
+	float:left;
+}
+#wrap ul:hover li ul li ul {
+	display:none;
+}
+#wrap ul li ul li:hover ul {
+	float:left;
+	left:240px;
+	top:0px;
+	display:block;
+	position:absolute;
 }
 
     </style>
@@ -82,7 +96,13 @@ width: 100%;
             <li ><a  href="#">CSS</a>
                 <ul>
                     <li><a>HTML CO B?N</a></li>
-                    <li><a>HTML Nang cao</a></li>
+                    <li><a>HTML Nang cao</a>
+                    	<ul>
+                        	<li><a href="#">HTML NC P1</a></li>
+                        	<li><a href="#">HTML NC P2</a></li>
+                        </ul>
+                    
+                    </li>
                 
                 </ul>
             
