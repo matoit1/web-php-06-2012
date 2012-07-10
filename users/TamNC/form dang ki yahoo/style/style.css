@@ -1,0 +1,135 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: sans-serif, helvetica, arial;
+	font-size: 12px;
+}
+#container {
+	width: 750px;
+	margin: auto;
+	border-left: solid 1px #aaaaaa;
+	border-right: solid 1px #aaaaaa;
+}
+#header {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#header hr {
+	margin-top: 2px;
+	width: 100%;
+	height: 4px;
+	background: #b1b8be;
+	border: none;
+}
+#header #image-yahoo {
+	margin: 10px 0px 0px 12px;
+	height: 100%;
+	float: left;
+}
+#header div img {
+	width: 145px;
+	height: 35px;
+}
+#header #link-header {
+	width: 160px;
+	float: right;
+	margin: 5px 0px 0px 5px;
+}
+#header #link-header a {
+	text-decoration: none;
+	color: #545454;
+}
+#frmDangKi {
+	margin-top: 28px;
+	width: 635px;
+	margin-left: 20px;
+}
+#header-table,
+#header-matkau {
+	width: 505px;
+}
+#header-table {
+	font-size: 16px;
+	color: #333343;
+}
+#header-table hr {
+	margin: 10px 0px;
+	width: 100%;
+	height: 2px;
+	background: #b8c4d0;
+	border: none;
+}
+#header-matkau p {
+	font-size: 15px;
+	color: #662986;
+	font-weight: bold;
+	margin-top: 30px;
+}
+#header-matkau hr {
+	margin: 5px 0px;
+	width: 100%;
+	height: 1px;
+	background: #d6d6d6;
+	border: none;
+}
+#frmDangKi form table tr td.clm-one {
+	width: 180px;
+	text-align: right;
+	color: #505070;
+	padding-right: 10px;
+	font-size: 13px;
+	height: 23px;
+}
+#frmDangKi form table tr td.clm-two {
+	width: 455px;
+}
+#frmDangKi form table tr td.clm-two #txtHo, 
+#frmDangKi form table tr td.clm-two #txtTen {
+	width: 140px;
+}
+#frmDangKi form table tr td.clm-two #slctGioiTinh {
+	width: 95px;
+}
+#frmDangKi form table tr td.clm-two #slctThang {
+	width: 147px;
+}
+#frmDangKi form table tr td.clm-two #txtNgay, 
+#frmDangKi form table tr td.clm-two #txtNam {
+	width: 65px;
+}
+#frmDangKi form table tr td.clm-two #slctNoiSong {
+	width: 287px;
+}
+#frmDangKi form table tr td.clm-two #txtTenTruyCap {
+	width: 95px;
+}
+#frmDangKi form table tr td.clm-two #slctDomain {
+	width: 120px;
+}
+#frmDangKi form table tr td.clm-two #btnKiemTra {
+	width: 50px;
+	height: 22px;
+	border: solid 1px #c2c2c2;
+	background: #e7e8e2;
+	font-size: 11px;
+}
+#frmDangKi form table tr td.clm-two #txtMatKhau,
+#frmDangKi form table tr td.clm-two #txtDanhLaiMatKhau {
+	width: 190px;
+}
+#frmDangKi form table tr td.clm-two #txtHo, 
+#frmDangKi form table tr td.clm-two #txtTen,
+#frmDangKi form table tr td.clm-two #slctGioiTinh,
+#frmDangKi form table tr td.clm-two #txtNgay, 
+#frmDangKi form table tr td.clm-two #txtNam,
+#frmDangKi form table tr td.clm-two #slctThang,
+#frmDangKi form table tr td.clm-two #slctNoiSong,
+#frmDangKi form table tr td.clm-two #txtTenTruyCap,
+#frmDangKi form table tr td.clm-two #slctDomain,
+#frmDangKi form table tr td.clm-two #txtMatKhau,
+#frmDangKi form table tr td.clm-two #txtDanhLaiMatKhau {
+	height: 20px;
+}
