@@ -158,8 +158,17 @@ update phongban set trphg='333445555' where maphg=5
 
 /* Cap nhat thong tin field Ma_NQL cho table NhanVien thoa rang buoc khoa ngoai */
 update nhanvien set ma_nql='123456789' where manv='123123456'
---
---
+update nhanvien set ma_nql='123456789' where manv='123456789'
+update nhanvien set ma_nql='147852369' where manv='147852369'
+update nhanvien set ma_nql='123456789' where manv='333445555'
+update nhanvien set ma_nql='666884444' where manv='666884444'
+update nhanvien set ma_nql='999887777' where manv='888665555'
+update nhanvien set ma_nql='123456789' where manv='987654321'
+update nhanvien set ma_nql='123456789' where manv='987987987'
+update nhanvien set ma_nql='123456789' where manv='999887777'
+
+
+
 
 /* Xoa 1 record trong table PhanCong: khong cho nhan vien Bui Thuy Vu tham gia du an Hoa Hoc nua*/
 delete from phancong where ma_nvien='999887777' and soda=40
