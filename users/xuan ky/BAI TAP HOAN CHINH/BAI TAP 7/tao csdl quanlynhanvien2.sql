@@ -1,5 +1,5 @@
 ﻿-- cau lenh tao co so du lieu
---create database quanlynhanvien2
+create database quanlynhanvien2
 
 -- cau lenh tao bang 'phongban' cho CSDL, primary key = maphg(bang ma utf8)
 create table quanlynhanvien2.phongban 
@@ -142,7 +142,7 @@ insert into quanlynhanvien2.phancong(ma_nvien, soda, thoigian)values
 	('999887777', 40, 11)
 	
 -- 6 Nhap lieu cho bang 'thannhan'
-insert into thannhan(ma_nvien, tentn, phai, ngsinh, quanhe) values	
+insert into quanlynhanvien2.thannhan(ma_nvien, tentn, phai, ngsinh, quanhe) values	
 	('333445555','Châu Long','Nam','2005-01-02','Chồng'),
 	('333445555','Khang','Nam','1973-10-25','Con Trai'),
 	('333445555','Ngọc Phi','Nữ','1976-04-05','Con Gái'),
@@ -151,21 +151,21 @@ insert into thannhan(ma_nvien, tentn, phai, ngsinh, quanhe) values
 	
 	
 /* Cap nhat thong tin field TrPHG cho table PhongBan thoa rang buoc khoa ngoai */
-update phongban set trphg='666884444' where maphg=1
-update phongban set trphg='987987987' where maphg=2
-update phongban set trphg='123456789' where maphg=4
-update phongban set trphg='333445555' where maphg=5
+update quanlynhanvien2.phongban set trphg='666884444' where maphg=1;
+update quanlynhanvien2.phongban set trphg='987987987' where maphg=2;
+update quanlynhanvien2.phongban set trphg='123456789' where maphg=4;
+update quanlynhanvien2.phongban set trphg='333445555' where maphg=5;
 
 /* Cap nhat thong tin field Ma_NQL cho table NhanVien thoa rang buoc khoa ngoai */
-update nhanvien set ma_nql='123456789' where manv='123123456'
-update nhanvien set ma_nql='123456789' where manv='123456789'
-update nhanvien set ma_nql='147852369' where manv='147852369'
-update nhanvien set ma_nql='123456789' where manv='333445555'
-update nhanvien set ma_nql='666884444' where manv='666884444'
-update nhanvien set ma_nql='999887777' where manv='888665555'
-update nhanvien set ma_nql='123456789' where manv='987654321'
-update nhanvien set ma_nql='123456789' where manv='987987987'
-update nhanvien set ma_nql='123456789' where manv='999887777'
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='123123456';
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='123456789';
+update quanlynhanvien2.nhanvien set ma_nql='147852369' where manv='147852369';
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='333445555';
+update quanlynhanvien2.nhanvien set ma_nql='666884444' where manv='666884444';
+update quanlynhanvien2.nhanvien set ma_nql='999887777' where manv='888665555';
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='987654321';
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='987987987';
+update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='999887777';
 
 
 
