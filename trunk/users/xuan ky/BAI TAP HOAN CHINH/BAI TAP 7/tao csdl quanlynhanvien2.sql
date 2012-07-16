@@ -17,7 +17,7 @@ create table quanlynhanvien2.diadiem_phg
 	maphg		int,
 	diadiem		varchar(50),
 	constraint pk_diadiemphg primary key (maphg, diadiem)
-) emgine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
+) engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
 
 -- cau lenh tao bang 'nhanvien' cho csdl, primary key = manv (bang ma utf8)
 create table quanlynhanvien2.nhanvien
@@ -75,7 +75,7 @@ alter table ddiem_phg add constraint fk_phongban_ddiem_phg foreign key (maphg) r
 alter table nhanvien add constraint fk_nhanvien_phongbna foreign key (maphg) references phongban(maphg)
 
 -- 3. tao khoa ngoai cho 2 bang 'nhan vien - phong ban (quan he 1 - n) can hoi thay lai (ma_nql hay manv)
-alter table phongban add constraint fk_nhanvien_phongban foreign key (trphg) references nhanvien(ma_nql)
+alter table phongban add constraint fk_nhanvien_phongban foreign key (trphg) references nhanvien(manv)
 
 -- 4. tao khoa ngoai cho 2 bang 'thannhan - nhanvien' (quan he 1-n) 
 alter table thannhan add constraint fk_thannhan_nhanvien foreign key (ma_nvien) references nhanvien(manv)
