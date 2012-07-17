@@ -167,9 +167,6 @@ update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='987654321';
 update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='987987987';
 update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='999887777';
 
-
-
-
 /* Xoa 1 record trong table PhanCong: khong cho nhan vien Bui Thuy Vu tham gia du an Hoa Hoc nua*/
 delete from phancong where ma_nvien='999887777' and soda=40
 
