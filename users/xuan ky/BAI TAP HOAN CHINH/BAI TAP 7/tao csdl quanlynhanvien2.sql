@@ -199,3 +199,20 @@ create table quanlythuebao.thongtincuocphi
 )engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
 -- tao khoa ngoai cho 2 bang 'thuebao - tenthuebao'
 alter quanlythuebao.sothuebao add constraint fk_thuebao_thongtinthuebao foreign key (matb) references thongtinthuebao(matb)
+
+/* cau lenh truy van  */
+-- 1.  Tim nhung nhan vien lam viec o phong so 4
+select * from nhanvien where phg =4
+
+--2.  Tim nhung nhan vien muc luong tren 30000
+select * from nhanvien where luong > 30000
+
+--3.  Tim cac nhan vien co muc luong tren 25000 o phong 4 hoac cac nhan
+select * from nhanvien where (luong > 25000 and phg=4) or (luong > 30000 and phg =5)
+
+--4.  Cho biet ho ten day du cua cac nhan vien o thanh pho ho chi minh
+/* chú ý từ khóa like lấy giá trị tương đối từ chuổi, dấu '%' đại diện cho nhiều ký tự */
+select concat (honv,' ', tenlot,' ', tennv) as 'Họ và Tên' from nhanvien where dchi like '%hcm%'
+
+--5.  Cho biet ngay sinh va dia chi cua nhan vien dinh ba tien
+select concat(honv,' ', tenlot,' ', tennv) as 'Họ và Tên', ngsinh as 'Ngày Sinh', dchi as 'Địa chỉ' from nhanvien where manv ='123456789'
