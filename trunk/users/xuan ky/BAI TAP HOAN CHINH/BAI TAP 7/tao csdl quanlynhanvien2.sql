@@ -169,5 +169,33 @@ update quanlynhanvien2.nhanvien set ma_nql='123456789' where manv='999887777';
 
 /* Xoa 1 record trong table PhanCong: khong cho nhan vien Bui Thuy Vu tham gia du an Hoa Hoc nua*/
 delete from phancong where ma_nvien='999887777' and soda=40
+------------------------------------------------------------------------------
+/* tao mot CSDL moi de thu nghiem */	
+create database quanlythuebao
 
+-- tao bang de thu nghiem nhung cau lenh
+create table quanlythuebao.thongtinthuebao
+(
+	matb	int,
+	tentb	varchar(100),
+	diachi	varchar(100),
+	constraint pk_tenthuebao primary key (matb)
+)engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
+
+create table quanlythuebao.sothuebao
+(
+	matb		int,
+	sothuebao	varchar(20)
+	constraint pk_thuebao primary key (matb, sothuebao)
+)engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
+
+create table quanlythuebao.thongtincuocphi
+(
+	sothuebao	varchar(20),
+	sodtgoidi		varchar(20),
+	loaicuoc	char(20),
 	
+	
+)engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
+-- tao khoa ngoai cho 2 bang 'thuebao - tenthuebao'
+alter quanlythuebao.sothuebao add constraint fk_thuebao_thongtinthuebao foreign key (matb) references thongtinthuebao(matb)
