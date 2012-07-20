@@ -1,0 +1,41 @@
+1.  Tim nhung nhan vien lam viec o phong so 
+select *
+from nhanvien
+where phg=4
+2.  Tim nhung nhan vien muc luong tren 30000
+select * 
+from nhanvien
+where luong>30000
+3.  Tim cac nhan vien co muc luong tren 25000 o phong 4 hoac cac nhan 
+vien tren 30000 o phong 5
+select *
+from nhanvien
+where luong>25000 and phg=4 or luong>30000 and phg=5
+4.  Cho biet ho ten day du cua cac nhan vien o thanh pho ho chi minh
+select honv,tenlot,tennv
+from nhanvien
+where like='%HCM%'
+
+5.  Cho biet ngay sinh va dia chi cua nhan vien dinh ba tien
+select ngsinh,dchi
+from nhanvien
+where tenlot='bá' 
+
+hai la ma
+
+1.  Voi moi phong ban, cho biet ten phong ban va dia diem phong
+select tenphg as  "tên Phòng", diadiem as " Ð?a di?m phòng" 
+from phongban as a , diadiem_phg as b
+where a.maphg=b.maphg
+2.  Tim ten nhung nguoi truong phong cua tung phong ban
+select tenphg as 'Tên Phòng Ban' , concat(honv,' ',tenlot,' ',tennv) as "Tên Tru?ng Phòng"
+from phongban as a, nhanvien as b
+where a.trphg=b.manv
+3.  Tim tenda, mada,ddiem_da,phong, tenphg, maphg, trphg,ng_nhanchuc
+select *
+from dean as a , phongban as b 
+where a.phong=b.maphg
+
+4.  Tim ten va dia chi cua tat ca cac nhan vien phong 'nghien cuu'
+
+
