@@ -216,3 +216,23 @@ select concat (honv,' ', tenlot,' ', tennv) as 'Họ và Tên' from nhanvien whe
 
 --5.  Cho biet ngay sinh va dia chi cua nhan vien dinh ba tien
 select concat(honv,' ', tenlot,' ', tennv) as 'Họ và Tên', ngsinh as 'Ngày Sinh', dchi as 'Địa chỉ' from nhanvien where manv ='123456789'
+
+/*	Bài tập II */
+--1.  Voi moi phong ban, cho biet ten phong ban va dia diem phong
+select 	tenphg as 'Tên Phòng Ban', diadiem as 'Địa Điểm'
+from	phongban as A, diadiem_phg as B
+where 	A.maphg = b.maphg
+
+--2.  Tim ten nhung nguoi truong phong cua tung phong ban
+select 	tenphg as 'Tên Phòng Ban', concat (honv,' ',tenlot,' ',tennv) as 'Họ Tên Trưởng Phòng'
+from	phongban as a, nhanvien as b
+where	a.trphg = b.manv
+
+--3.  Tim tenda, mada,ddiem_da,phong, tenphg, maphg, trphg,ng_nhanchuc
+select	tenda, mada, ddiem_da, tenphg, trphg, ng_nhanchuc
+from	dean as a, phongban as b, nhanvien as c, phancong as d
+where	a.
+
+
+
+
