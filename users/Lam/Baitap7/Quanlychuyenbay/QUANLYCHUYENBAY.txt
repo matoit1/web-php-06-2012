@@ -1,0 +1,297 @@
+﻿Bai Tap quanlychuyenbay
+
+--tao database quanlychuyenbay-----
+create database quanlychuyenbay
+
+---tao table nhanvien  (primary key = manv)
+   create table nhanvien
+(
+    manv varchar(15),
+    ten     varchar(15),
+    dchi  varchar(50),
+   dthoai  varchar(12),
+   luong double,
+   loainv bit,
+   constraint pk_nhanvien primary key(manv)
+)engine = InnoBD default charset = utf8 collate = utf8_unicode_ci;
+
+---tao table khachhang (primary key= makh)---
+  create table khachhang
+(
+      makh  varchar(15),
+     ten     varchar(15),
+     dchi varchar(50),
+    dthoai varchar(12),
+    constraint pk_khachhang primary key(makh)
+) engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table khanang (primary key = manv,maloai)
+  create table khanang
+(
+   manv varchar(15),
+   maloai varchar(15),
+  constraint pk_khanang primary key(manv)
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table loaimb (primary key = maloai)
+create table loaimb
+(
+    hangsx  varchar(15),
+    maloai varchar(15),
+   constraint pk_loaimb primary key(maloai)
+
+) engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table datcho (primary key = makh,ngaydi,macb)
+  create table datcho
+(
+    makh varchar(15),
+    ngaydi date,    
+   macb varchar(4),
+  constraint pk_datcho primary key(makh,ngaydi,macb)
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table phancong(primary key = manv,ngaydi,macb)
+create table phancong
+(
+   manv varchar(15),
+   ngaydi date,
+   macb varchar(4),
+   constraint pk_phancong primary key(manv,ngaydi,macb)
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table lichbay (primary key = ngaydi,macb)
+create table lichbay
+(
+  ngaydi date,
+  macb varchar(4),
+  sohieu int,
+  maloai varchar(15),
+constraint pk_lichbay primary key(ngaydi,macb)
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+----tao table chuyenbay (primary key = macb)
+create table chuyenbay
+(
+ macb varchar(4),
+sbdi varchar(3),
+sbden varchar(3),
+giodi time,
+gioden time,
+constraint pk_chuyenbay primary key(macb)
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+
+----tao table maybay (primary key =sohieu)
+create table maybay 
+(
+  sohieu int,
+  maloai  varchar(15),
+constraint pk_maybay primary key(sohieu)
+  
+)engine=innobd default charset=utf8 collate= utf8_unicode_ci;
+
+
+Tao Khoa Ngoai (9khoa)
+
+
+-- 1. tao khoa ngoai cho hai bang 'phancong' va 'nhanvien' (quan he 1 - n)
+alter table  phancong add constraint fk_phancong_nhanvien foreign key (manv)  references nhanvien(manv)
+
+-- 2. tao khoa ngoai cho hai bang 'khanang' va 'nhanvien' (quan he 1 - n)
+alter table khanang add constraint fk_khanang_nhanvien foreign key (manv) references nhanvien(manv)
+
+-- 3. tao khoa ngoai cho hai bang 'khanang'  va 'loaimb' (quan he 1 - n)
+alter table khanang add constraint fk_khanang_loaimb foreign key (maloai) references loaimb(maloai)
+
+-- 4. tao khoa ngoai cho hai bang 'maybay' va 'loaimb' (quan he 1 - n)
+alter table maybay add constraint fk_maybay_loaimb foreign key (maloai) references loaimb(maloai)
+
+-- 5. tao khoa ngoai cho hai bang 'lichbay' va 'maybay' (quan he 1 - n)
+alter table lichbay add constraint fk_lichbay_maybay foreign key (sohieu) references maybay(sohieu)
+
+-- 6. tao khoa ngoai cho hai bang 'phancong' va 'lichbay' (quan he 1 - n)
+alter table phancong add constraint fk_phancong_lichbay foreign key (macb,ngaydi) references lichbay(macb,ngaydi)   ?????????????????????????????
+
+-- 7. tao khoa ngoai cho hai bang 'lichbay' va 'chuyenbay' (quan he 1 - n)
+alter table  lichbay add constraint fk_lichbay_chuyenbay foreign key (macb) references chuyenbay(macb)
+
+-- 8. tao khoa ngoai cho hai bang 'datcho'  va 'lichbay'(quan he 1 - n)
+alter table datcho add constraint fk_datcho_lichbay foreign key (macb,ngaydi) references lichbay(macb,ngaydi)
+
+-- 9. tao khoa ngoai cho hai bang 'datcho' va  'khachhang'(quan he 1 - n)
+alter table datcho add constraint fk_datcho_khachhang foreign key (makh) references khachhang(makh)
+
+
+
+
+Nhap lieu
+
+-- 1. nhap lieu cho bang 'nhanvien'
+insert into nhanvien (manv,ten,dchi,dthoai,luong,loainv) values
+   (1006 , 'Chi',  '12/6 Nguyen Kiem', 8120012 , 150000 ,  0),
+   (1005,  'Giao' , '65 Nguyen Thai Son' , 8324467  ,500000   ,0),
+    (1001 , 'Huong', ' 8 Dien Bien Phu ', 8330733 , 500000 ,  1),
+    (1002,'Phong' , '1 Ly Thuong Kiet ', 8308117 , 450000 , 1),
+    (1004, ' Phuong',  '351 Lac Long Quan'  ,8308155 , 250000 ,  0),
+    (1003 , 'Quang',  '78 Truong Dinh ', 8324461 , 350000  , 1),
+    (1007 , 'Tam' , '36 Nguyen Van Cu ', 8458188 , 500000 ,  0)
+
+?  xem lai
+
+
+-- 2. nhap lieu cho bang 'loaimb'
+insert into loaimb(hangsx,maloai) values
+('Airbus','A310'),
+('Airbus','A320'),
+('Airbus','A330'),
+('Airbus','A340'),
+('Boing','B727'),
+('Boing','B747'),
+('Boing','B757'),
+('MD','DC10'),
+('MD','DC9')
+
+
+-- 3. nhap lieu cho bang 'maybay'
+insert into maybay(sohieu,maloai)
+values
+(10 ,'B747'),
+(11 ,'B727'),
+(13 ,'B727'),
+(13 ,'B747'),
+(21 ,'DC10'),
+(21 ,'DC9'),
+(22 ,'B757'),
+(22,'DC9'),
+(23 ,'DC9'),
+(24 ,'DC9'),
+(70 ,'A310'),
+(80 ,'A310'),
+(93 ,'B757')
+
+
+-- 4. nhap lieu cho bang 'khachhang'
+insert into khachhang(MAKH,TEN,DCHI,DTHOAI) values
+
+(0009 ,' Nga' ,' 223 Nguyen Trai'  ,  8932320),
+(0101 ,' Anh' ,' 567 Tran Phu   '   , 8826729),
+(0045 ,' Thu' ,' 285 Le Loi     '  ,  8932203),
+(0012 ,' Ha ' ,'435 Quang Trung '  ,  8933232),
+(0238 ,' Hung' ,' 456 Pasteur   '  ,  9812101),
+(0397 ,' Thanh ',' 234 Le Van Si' ,   8952943),
+(0582 ,' Mai ' ,'789 Nguyen Du' ,'null'),
+(0934 ,' Minh' ,' 678 Le Lai ','null'),
+(0091 ,' Hai ' ,'345 Hung Vuong ' ,   8893223),
+(0314 ,' Phuong','395 Vo Van Tan ',    8232320),
+(0613 ,' Vu '  ,'348 CMT8  '      ,   8343232),
+(0586 ,' Son ' ,'123 Bach Dang  ' ,   8556223),
+(0422, ' Tien ',' 75 Nguyen Thong',   8332222)
+
+
+
+
+-- 5. nhap lieu cho bang 'chuyenbay'
+insert into chuyenbay(macb,sbdi,sbden,giodi,gioden) values
+( 100, ' SLC' ,' BOS ',' 08:00 ', ' 17:50'),
+(112 , 'DCA ', 'DEN  ','14:00  ', '18:07'),
+(121 , 'STL ', 'SLC  ','07:00   ','09:13'),
+(122 , 'STL ',' YYV ','  08:30 ','  10:19'),
+(206 , 'DFW ' ,'  STL','  09:00 ','  11:40'),
+(330 , 'JFK ','  YYV','  16:00 ','  18:53'),
+(334 , 'ORD ' ,'  MIA','  12:00 ','  14:14'),
+(335 , 'MIA ' ,'  ORD','  15:00 ','  17:14'),
+(336 , 'ORD ','MIA  ','18:00   ','20:14'),
+(337 , 'MIA ',' ORD ','  20:30 ','  23:53'),
+(394 , 'DFW ' ,'  MIA','  19:00 ','  21:30'),
+(395 , 'MIA ' ,'  DFW','  21:00 ','  23:43'),
+(449 , 'CDG ' ,'  DEN','  10:00' ,'  19:29'),
+(930 , 'YYV ' ,' DCA ','  13:00' ,'  16:10'),
+(931 , 'DCA ' ,'  YYV','  17:00 ','  18:10'),
+(932 , 'DCA ',' YYV ','  18:00' ,'  19:10'),
+(991,  'BOS ' ,'  ORD',' 17:00  ' ,'18:22')
+
+-- 6. nhap lieu cho bang 'lichbay'
+insert into lichbay(ngaydi,macb,sohieu,maloai) values
+('2000-01-11',100,80,'A310'),
+('2000-01-11',112,21,'DC10'),
+('2000-01-11',206,22,'DC9'),
+( '2000-01-11',334,10,'B747'),
+('2000-01-11',395,23,'DC9'),
+('2000-01-11',991,22,'B757'),
+('2000-01-11',337,10,'B747'),
+('2000-10-31',100,11,'B727'),
+('2000-10-31',112,11,'B727'),
+('2000-10-31',206,13,'B727'),
+('2000-10-31',334,10,'B747'),
+('2000-10-31',335,10,'B747'),
+('2000-10-31',337,24,'DC9'),
+('2000-10-31',449,70,'A310')
+
+
+-- 7. nhap lieu cho bang 'phancong'
+
+insert into phancong(manv,ngaydi,macb) values
+
+(1001 ,' 2000-01-11',  100),
+(1001 ,' 2000-10-31',  100),
+(1002 ,' 2000-01-11',   100),
+(1002 ,' 2000-10-31',   100),
+(1003 ,' 2000-10-31',   100),
+(1003 ,' 2000-10-31',   337),
+(1004 ,' 2000-10-31',   100),
+(1004 ,' 2000-10-31',   337),
+(1005 ,' 2000-10-31',   337),
+(1006 ,' 2000-01-11',   991),
+(1006 ,' 2000-10-31',   337),
+(1007 ,' 2000-01-11',   112),
+(1007 ,' 2000-01-11',   991),
+(1007 ,' 2000-10-31',   206)
+
+
+
+
+
+
+
+-- 8. nhap lieu cho bang 'datcho'
+insert into datcho(MAKH , NGAYDI,  MACB) values
+
+(0009 ,' 2000-01-11' , 100),
+(0009 ,' 2000-10-31' , 449),
+(0045 ,' 2000-01-11' , 991),
+(0012 ,' 2000-10-31' , 206),
+(0238 ,' 2000-10-31' , 334),
+(0582 ,' 2000-01-11' , 991),
+(0091 ,' 2000-01-11' , 100),
+(0314 ,' 2000-10-31' , 449),
+(0613 ,' 2000-01-11' , 100),
+(0586 ,' 2000-01-11' , 991),
+(0586 ,' 2000-10-31' , 100),
+(0422 ,' 2000-10-31' , 449)
+
+
+
+
+
+-- 9. nhap lieu cho bang 'khanang'
+ insert into khanang(manv,maloai)VALUES
+(1001 , NULL),
+(1001 , NULL),
+(1001 , NULL),
+(1001 , NULL),
+(1002 , NULL),
+(1002 , NULL),
+(1002 ,NULL),
+(1002 , NULL),
+(1003 ,  NULL),
+(1003 , NULL)
+
+
+
+
+
+
+
+
+

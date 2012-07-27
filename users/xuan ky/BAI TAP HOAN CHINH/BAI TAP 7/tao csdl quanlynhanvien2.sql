@@ -1,4 +1,4 @@
-﻿-- cau lenh tao co so du lieu
+-- cau lenh tao co so du lieu
 create database quanlynhanvien2
 
 -- cau lenh tao bang 'phongban' cho CSDL, primary key = maphg(bang ma utf8)
@@ -93,39 +93,39 @@ alter table nhanvien add constraint fk_nhanvien_nhanvien foreign key (ma_nql) re
 -- NHAP LIEU CHO TUNG BANG
 -- 1. nhap lieu cho bang 'phongban'
 insert into quanlynhanvien2.phongban (tenphg, maphg, trphg, ng_nhanchuc) values
-	('Quản Lý',1,NULL,'1971-06-19'),
-	('Tổ Chức',2,NULL,'2001-01-15'),
-	('Điều Hành',4,NULL,'1985-01-01'),
-	('Nghiên Cứu',5,NULL,'1978-05-22')
+	('Qu?n L�',1,NULL,'1971-06-19'),
+	('T? Ch?c',2,NULL,'2001-01-15'),
+	('?i?u H�nh',4,NULL,'1985-01-01'),
+	('Nghi�n C?u',5,NULL,'1978-05-22')
 
 -- 2. nhap lieu cho bang 'diadiem_phg'
 insert into quanlynhanvien2.diadiem_phg (maphg, diadiem) values	
-	(1,'Vũng Tàu'),
+	(1,'V?ng T�u'),
 	(2,'TP HCM'),
 	(2,'Nha Trang'),
 	(4,'TP HCM'),
-	(5,'Hà Nội'),
+	(5,'H� N?i'),
 	(5,'TP HCM')
 	
 -- 3 Nhap lieu cho bang 'nhanvien'
 insert into quanlynhanvien2.nhanvien (honv, tenlot, tennv, manv, ngsinh, dchi, phai, luong, ma_nql, phg) values
-	('Cao','Si','Ki','123123456','1986-08-09','123 Lê Lợi - Quận 1 - TP HCM','Nam',15000,NULL,5),
-	('Đinh','Bá','Tiến','123456789','1955-01-09','731 Trần Hưng Đạo - Quận 1 - TP HCM','Nam',30000,NULL,5),
-	('Trương','Lê','Đoan','147852369','1986-05-15','22/41/1 Lê Văn Thọ- Phường 11 - Gò Vấp','Nữ',16500,NULL,1),
-	('Nguyễn','Thanh','Tùng','333445555','1945-12-08','638 Nguyễn Văn Cừ - Quận 5 - TP HCM','Nam',40000,NULL,5),
-	('Lê','Huỳnh','Đức','666884444','1986-06-01','126 Nguyễn Văn Cừ - Quận 5 - TP HCM','Nam',27000,NULL,1),
-	('Vương','Ngọc','Quyên','888665555','1965-09-15','414 Nơ Trang Long - Quận Bình Thạnh - TP HCM','Nam',29400,NULL,4),
-	('Lê','Thị','Nhàn','987654321','1931-06-20','291 Hồ Văn Huê - Quận Phú Nhuận - TP HCM','Nữ',43000,NULL,5),
-	('Võ','Đức','Minh','987987987','1985-09-16','414 Nơ Trang Long - Quận Bình Thạnh - TP HCM','Nam',30000,NULL,5),
-	('Bùi','Thụy','Vũ','999887777','1958-07-19','332 Nguyễn Thái Học - Quận 1 - TP HCM','Nam',25000,NULL,4)
+	('Cao','Si','Ki','123123456','1986-08-09','123 L� L?i - Qu?n 1 - TP HCM','Nam',15000,NULL,5),
+	('?inh','B�','Ti?n','123456789','1955-01-09','731 Tr?n H?ng ??o - Qu?n 1 - TP HCM','Nam',30000,NULL,5),
+	('Tr??ng','L�','?oan','147852369','1986-05-15','22/41/1 L� V?n Th?- Ph??ng 11 - G� V?p','N?',16500,NULL,1),
+	('Nguy?n','Thanh','T�ng','333445555','1945-12-08','638 Nguy?n V?n C? - Qu?n 5 - TP HCM','Nam',40000,NULL,5),
+	('L�','Hu?nh','??c','666884444','1986-06-01','126 Nguy?n V?n C? - Qu?n 5 - TP HCM','Nam',27000,NULL,1),
+	('V??ng','Ng?c','Quy�n','888665555','1965-09-15','414 N? Trang Long - Qu?n B�nh Th?nh - TP HCM','Nam',29400,NULL,4),
+	('L�','Th?','Nh�n','987654321','1931-06-20','291 H? V?n Hu� - Qu?n Ph� Nhu?n - TP HCM','N?',43000,NULL,5),
+	('V�','??c','Minh','987987987','1985-09-16','414 N? Trang Long - Qu?n B�nh Th?nh - TP HCM','Nam',30000,NULL,5),
+	('B�i','Th?y','V?','999887777','1958-07-19','332 Nguy?n Th�i H?c - Qu?n 1 - TP HCM','Nam',25000,NULL,4)
 	
 -- 4 Nhap lieu cho bang 'dean'
 insert into quanlynhanvien2.dean (tenda, mada, ddiem_da, phong)values	
-	('Sản Phẩm Y', 2, 'Nha Trang', 1),
-	('Sản Phẩm Z', 3, 'TP HCM', 5),
-	('Sản Phẩm X', 5, 'Vũng Tàu', 1),
-	('Tin Học Hóa', 10, 'Hà Nội', 4),
-	('Hóa Học', 40, 'Biên Hòa', 5)
+	('S?n Ph?m Y', 2, 'Nha Trang', 1),
+	('S?n Ph?m Z', 3, 'TP HCM', 5),
+	('S?n Ph?m X', 5, 'V?ng T�u', 1),
+	('Tin H?c H�a', 10, 'H� N?i', 4),
+	('H�a H?c', 40, 'Bi�n H�a', 5)
 	
 -- 5 Nhap lieu cho bang 'phancong'
 insert into quanlynhanvien2.phancong(ma_nvien, soda, thoigian)values	
@@ -143,11 +143,11 @@ insert into quanlynhanvien2.phancong(ma_nvien, soda, thoigian)values
 	
 -- 6 Nhap lieu cho bang 'thannhan'
 insert into quanlynhanvien2.thannhan(ma_nvien, tentn, phai, ngsinh, quanhe) values	
-	('333445555','Châu Long','Nam','2005-01-02','Chồng'),
+	('333445555','Ch�u Long','Nam','2005-01-02','Ch?ng'),
 	('333445555','Khang','Nam','1973-10-25','Con Trai'),
-	('333445555','Ngọc Phi','Nữ','1976-04-05','Con Gái'),
-	('987654321','Đăng','Nam','1932-02-29','Chồng'),
-	('999887777','Toàn','Nam','1986-01-02','Chồng')
+	('333445555','Ng?c Phi','N?','1976-04-05','Con G�i'),
+	('987654321','??ng','Nam','1932-02-29','Ch?ng'),
+	('999887777','To�n','Nam','1986-01-02','Ch?ng')
 	
 	
 /* Cap nhat thong tin field TrPHG cho table PhongBan thoa rang buoc khoa ngoai */
