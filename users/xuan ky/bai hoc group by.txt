@@ -1,0 +1,12 @@
+﻿cau lenh truy van gom nhom
+* count
+- sum
+- avg
+- min
+- max
+-------------
+select	[cot], count(*)
+
+from [bang]
+
+where	group by [cot]
