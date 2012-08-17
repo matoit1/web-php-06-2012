@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <script type="text/javascript">
+            function keyPress(var valueButton) {
+                document.getElementById("screen").value = valueButton;
+            }
+        </script>
+    </head>
+    <body>
+                <form action="calculator.php" method="POST">
+        <table align ="center" border = "0" style="background-color: green; padding: 2px;" >
+        <tr>
+            <td colspan="5"><input type="text" id="screen" name="screen" value="0" maxlength="100" readonly="true" style="width: 180px; text-align: right;" /></td>
+        </tr>
+        
+        <tr> 
+            <td>
+                <input type="button" name="mc" value="MC" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="mr" value="MR" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="ms" value="MS" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="mcong" value="M+" style="width: 30px;" />
+            </td> 
+            
+            <td>
+                <input type="button" name="mtru" value="M-" style="width: 30px;" />
+            </td>           
+        </tr>
+        
+        <tr> 
+            <td>
+                <input type="button" name="back" value="<-" style="width: 30px;"/>
+            </td>
+            
+            <td>
+                <input type="button" name="ce" value="CE" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="c" value="C" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="congtru" value="+/-" style="width: 30px;" />
+            </td> 
+            
+            <td>
+                <input type="button" name="sqrt" value="Sqrt" style="width: 30px;" />
+            </td>           
+        </tr> 
+        
+        <tr> 
+            <td>
+                <input type="button" name="7" value="7" style="width: 30px;"/>
+            </td>
+            
+            <td>
+                <input type="button" name="8" value="8" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="9" value="9" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="chia" value="/" style="width: 30px;" />
+            </td> 
+            
+            <td>
+                <input type="button" name="phtram" value="%" style="width: 30px;" />
+            </td>           
+        </tr>  
+        
+        <tr> 
+            <td>
+                <input type="button" name="4" value="4" style="width: 30px;"/>
+            </td>
+            
+            <td>
+                <input type="button" name="5" value="5" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="6" value="6" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="nhan" value="*" style="width: 30px;" />
+            </td> 
+            
+            <td>
+                <input type="button" name="x" value="1/x" style="width: 30px;" />
+            </td>   
+            
+        <tr> 
+            <td>
+                <input type="button" name="1" value="1" style="width: 30px;" onclick="keyPress('1')"/>
+            </td>
+            
+            <td>
+                <input type="button" name="2" value="2" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="3" value="3" style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="tru" value="-" style="width: 30px;" />
+            </td> 
+            
+            <td rowspan="2">
+                <input type="submit" name="submit" value="=" style="width: 30px; height: 47px;" />
+            </td>                      
+        </tr>  
+        
+        <tr> 
+            <td colspan="2">
+                <input type="button" name="0" value="0" style="width: 64px;"/>
+            </td>
+            
+            <td>
+                <input type="button" name="phay" value="," style="width: 30px;" />
+            </td>
+            
+            <td>
+                <input type="button" name="cong" value="+" style="width: 30px;" />
+            </td>
+            
+
+   
+        </tr>                         
+        </table>
+        </form>
+    </body>
+</html>

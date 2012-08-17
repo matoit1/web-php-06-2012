@@ -22,11 +22,11 @@
         </table>
         <table align="center" border="1">
             <?php 
+            echo $so;
             for($i=1;$i<($so + 1);$i++){
                 
-            
             echo    "<tr>
-                        <td width = '300' colspan='2' align= 'center'>Dòng ".$i.": Tự học PHP thật là khó</td>
+                    <td width = '300' colspan='2' align= 'center'>Dòng ".$i.": Tự học PHP thật là khó</td>
                     </tr>";
                     }
             ?>

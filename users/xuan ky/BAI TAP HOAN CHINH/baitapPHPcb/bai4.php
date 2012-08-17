@@ -16,11 +16,11 @@
     $db = mysql_select_db('danhbadienthoai');
     //link không tồn tại page nên ta gán cho page giá trị đầu tiên.
     if(!isset($_GET['page'])){
-        $_GET['page']=1;
+        $vt = $_GET['page']=1;
     }
     
     //cong thức tính vị trí hiện tại của trang
-    $vitri = ($_GET['page'] - 1)*30;
+    $vitri = ($vt - 1)*30;
     // test bien $vitri = 0;
     // câu lệnh lấy record từ CSDL.
     //$kq = mysql_query('select * from sodienthoai oderby sodienthoai.stt ' );

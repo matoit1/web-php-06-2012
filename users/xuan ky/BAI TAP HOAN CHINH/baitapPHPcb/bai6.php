@@ -6,7 +6,7 @@
     <body>
     <?php
         if(isset($_POST['so'])) {
-        $so = $_POST['so'];
+        $so = (integer)$_POST['so'];
         }
     ?>
     <form action="bai6.php" method="POST">
@@ -23,15 +23,10 @@
         <table align="center" border="1">
             <tr>
                         <td width = "300" colspan="2" align= "center">Bảng cửu chương: <?php echo $so;  ?></td>
-            </tr>            <?php 
-            for($i=1;$i<11;$i++){
-             $cc = $so*$i;   
-            
-            echo    "
-                    <tr>
-                        <td width = '300' colspan='2' align= 'center'>".$so." x ". $i." = ". $cc."</td>
-                    </tr>";
-                    }
+            </tr>            
+            <?php 
+                include "ham_inbangcuuchuong.php";
+                inbangcuuchuong($so);
             ?>
         </table>
     </form>        
