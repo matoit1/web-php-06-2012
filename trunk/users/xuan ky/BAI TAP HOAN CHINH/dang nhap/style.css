@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    position: relative;
+    height: 100%;
+}
+
+#header {
+    height: 71px;
+    background: #F1F1F1;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#header img {
+    margin: 10px 0px 0px 20px;
+}
+
+.createacc{
+    float: right;
+    margin: 20px 10px 20px 0px;
+    text-decoration: none;
+    text-align: center;
+    background: #FF8000;
+    color: white;
+    width: 150px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+ .createacc:hover{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #BF0904;
+}
+
+#content{
+    width: auto;
+    max-width: 1000px;
+    min-width: 700px;
+    padding: 50px;
+    padding-bottom: 30px; /* chieu cao cua footer*/
+}
+
+#signin{
+    background: #F1F1F1;
+    width: 250px;
+    float: right;
+    padding:15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;    
+}
+.inputbox{
+    display: block;
+    width: 100%;
+    float: right;
+    margin-top: 15px;
+}
+a{
+    color: #FF8000;
+    text-decoration: none;
+    margin-top: 10px;
+}
+a:hover {
+    color: #950000;
+    text-decoration: none;
+}
+
+#info {
+    margin: 0px 0px 0px 100px;
+    border: solid #F1F1F1 1px;
+    float: left;
+    width: 380px;
+    padding:15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; 
+}
+
+#footer {
+    position: absolute; /* canh theo relative cua wrap*/
+    width: 100%;
+    height: 30px; /* chieu cao cua footer*/
+    border-top: solid 1px #F1F1F1;
+    bottom: 0;
+    text-align: center;
+}
+.inforhead{
+    background: #F1F1F1;
+}
+.maucam{
+    color: #FF8000;
+}
