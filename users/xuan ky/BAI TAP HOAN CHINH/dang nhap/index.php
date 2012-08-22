@@ -3,6 +3,17 @@
         <title>Đăng nhập</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <meta http-equiv="content-type" content="text/html; charset = utf-8" />
+        <script  language = "javascrip" type="text/javascript">
+            function checkinput(){
+                var ten = document.getElementById(ten).value;
+                var pass = document.getElementById(pass).value;
+                if(ten=="" || pass==""){
+                    aler ('Bạn hãy nhập đầy đủ thông tin để đang nhập.');
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
     <body>
         <div id="wrap">
@@ -37,7 +48,7 @@
             
             
             <div id="signin">
-                <form>
+                <form action="" method="POST" onsubmit="checkinput();">
                     <h2><strong class="maucam">Đăng Nhập</strong></h2>
                     <div class="inputbox">
                     <label for="ten">Tên đăng nhập:</label>
