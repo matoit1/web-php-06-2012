@@ -1,14 +1,18 @@
+<?php 
+    session_start();
+?>
 <html>
     <head>
         <title>Đăng nhập</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <meta http-equiv="content-type" content="text/html; charset = utf-8" />
         <script  language = "javascrip" type="text/javascript">
-            function checkinput(){
-                var ten = document.getElementById(ten).value;
-                var pass = document.getElementById(pass).value;
+            function checkInput(){
+                
+                var ten = document.getElementById("ten").value;
+                var pass = document.getElementById("pass").value;
                 if(ten=="" || pass==""){
-                    aler ('Bạn hãy nhập đầy đủ thông tin để đang nhập.');
+                    alert('Bạn hãy nhập đầy đủ thông tin để đăng nhập.');
                     return false;
                 }
                 return true;
@@ -48,19 +52,31 @@
             
             
             <div id="signin">
-                <form action="" method="POST" onsubmit="checkinput();">
+                <form action="logincontroler.php" method="POST" onSubmit="return checkInput();">
                     <h2><strong class="maucam">Đăng Nhập</strong></h2>
-                    <div class="inputbox">
-                    <label for="ten">Tên đăng nhập:</label>
-                    <input type="text" name="ten" id="ten" value="" />
+                    <div class="inputbox" class="lable">
+                    <label for="ten">Tên đăng nhập:</label><br />
+                    <input type="text" name="ten" id="ten" value="" size="25" />
                     </div>
                     <div class="inputbox">
-                    <label for="pass">Mật Khẩu:</label>
-                    <input type="password" name="pass" id="pass" value="" /><br /><br />
+                    <label for="pass" class="lable">Mật Khẩu:</label><br />
+                    <input type="password" name="pass" id="pass" value="" size="25" /><br /><br />
                     <input type="submit" name="submit" id="submit" value="Đăng nhập" style="width: 100px; height: 25px; text-align: center;" /><br />
                     </div>
                     
                     <div class="inputbox"><a href="#">Quên mật khẩu</a></div>
+                    <div style="color: red;">
+                        <?php 
+                            if (isset($_SESSION['error'])){
+                                echo $_SESSION['error'];
+                                unset($_SESSION['error']);
+                            }
+                            
+                            if (isset($_SESSION['userlogin'])){
+                                unset($_SESSION['userlogin']);
+                            }
+                        ?>
+                    </div>
                 </form>
             
             </div><!--end signin-->

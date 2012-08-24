@@ -9,6 +9,7 @@
     margin: 0px auto;
     width: 800px;
     height: 100%;
+    behavior: url(whateverhover.htc);
 }
 
 #header {
@@ -24,26 +25,76 @@
     text-decoration: none;
     color: #FF8000;
     font-weight: bold;
-}   
+} 
+
+#header #infouser{
+    position: absolute;   
+    right: 0px;
+    bottom: 0px; 
+    background: #B7B7B7;
+    color: #fff;
+    width: 200px;
+    height: 25px;
+
+    padding-top: 4px;
+    padding-left: 20px;
+
+	-moz-border-radius-topright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);    
+   
+   /* -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    behavior:url(border-radius.htc);*/
+}
+
+#header #infouser a {
+    position: absolute;
+    color: gray;
+    top: 0px;
+    margin-left: 90px;
+    padding-top: 4px;
+
+    height: 25px;
+    width: 50px;
+
+    
+}  
 
 #nav {
     width: 100%;
     height: 36px;
     background: url('images/bgnav.png') repeat-x;
     float: left;
+  /*  -moz-border-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    behavior:url(border-radius.htc);*/
+    
     -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);
+    behavior: url(whateverhover.htc);
 }
 #nav ul{
     float: left;
     list-style: none;
     padding-top: 2px;
+    behavior: url(whateverhover.htc);
 }
 
 #nav ul li{
     list-style-type: none;
     position: relative; /* cha cua ul phia duoi*/
     float: left;
+    behavior: url(whateverhover.htc);
     
 }
 
@@ -54,14 +105,22 @@
     text-transform: uppercase;
     padding: 5px 20px 5px 20px;
     font-weight: bold;
+    
 }
 
 #nav ul li a:hover {
     background:url('images/bgnavhover.png');
     color: #8A0000;
     font-weight: bold;
-    -moz-border-radius: 5px;
+   /* -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    behavior:url(border-radius.htc);*/
+    
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);
+    behavior: url(whateverhover.htc);
 }
 
 /*me nu con xo xuong*/
@@ -88,7 +147,7 @@
     height: 100%;
     margin: 0px ;
     padding:0px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     background-color: #fff;
     /*border: solid 1px red;*/
   
@@ -115,10 +174,16 @@
     height: 35px;
     position: absolute;
     bottom: auto;
-    -moz-border-radius: 5px;
+   /* -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    behavior:url(border-radius.htc);*/
     text-align: center;
-    padding-top: 35px
+    padding-top: 35px;
+   	
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);
 }
 
 .text {

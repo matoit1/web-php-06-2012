@@ -27,11 +27,15 @@
     width: 150px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    border-radius: 5px;
+	behavior: url(border-radius.htc);
 }
 
  .createacc:hover{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+   	border-radius: 5px;
+	behavior: url(border-radius.htc);
     background: #BF0904;
 }
 
@@ -49,7 +53,9 @@
     float: right;
     padding:15px;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;    
+    -webkit-border-radius: 10px;  
+    border-radius: 10px;
+	behavior: url(border-radius.htc);  
 }
 .inputbox{
     display: block;
@@ -75,6 +81,8 @@ a:hover {
     padding:15px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px; 
+   	border-radius: 10px;
+	behavior: url(border-radius.htc);
 }
 
 #footer {
@@ -90,4 +98,8 @@ a:hover {
 }
 .maucam{
     color: #FF8000;
+}
+
+.lable{
+    width: 100%;
 }
