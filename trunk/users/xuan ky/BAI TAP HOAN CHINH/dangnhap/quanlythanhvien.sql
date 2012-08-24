@@ -18,7 +18,7 @@ create table thongtinthanhvien (
 --tạo bảng vai trò của thành viên vaitrothanhvien
 create table vaitrothanhvien (
 	roleid int,
-	ngaycap date,
+	chucvu varchar(10),
 	constraint pk_vaitrothanhvien primary key (roleid)
 
 )engine = InnoBD default charset = utf8 collate utf8_unicode_ci;
@@ -26,14 +26,14 @@ create table vaitrothanhvien (
 --tạo khoá ngoại cho 2 bảng 1 - n (vaitrothanhvien - thongtinthanhvien)
 alter table thongtinthanhvien add constraint fk_vttv_tttv foreign key (roleid) references vaitrothanhvien(roleid)
 --nhập liệu cho bảng vai trò thành viên
-insert into vaitrothanhvien(roleid, ngaycap)value
+insert into vaitrothanhvien(roleid, chucvu) value
 	(1, 'admin'),
 	(2, 'mod'),
 	(3, 'support'),
-	(4, 'commiter')
+	(4, 'commiter'),
 	(5, 'register')
 --nhập liệu cho bảng thongtinthanhvien
-insert into (stt, ten, pass, roleid, email, dienthoai)value	
+insert into thongtinthanhvien(stt, ten, pass, roleid, email, dienthoai)value	
 	(1,'vanlam','abcd1234',1,'vanlam@yahoo.com','0909123456'),
 	(2,'khoanam','123456',2,'khoanam@gmail.com','0907123456'),
 	(3,'hoanganh','6789',2,'hoanganh@hotmail.com','0906123456'),
