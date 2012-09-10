@@ -3,14 +3,14 @@ create database quanlythanhvien
 
 --tạo bảng thông tin thành viên (thongtinthanhvien)
 create table thongtinthanhvien (
-	stt int,
+	stt int NOT NULL AUTO_INCREMENT,
 	ten varchar(50),
 	pass varchar(100),
 	roleid int,
 	email varchar(50),
 	dienthoai varchar (15),
 	
-	constraint pk_thongtinnhanvien primary key (ten, roleid )
+	constraint pk_thongtinnhanvien primary key (stt, roleid )
 	
 	
 )engine = InnoBD default charset= utf8 collate = utf8_unicode_ci; 
